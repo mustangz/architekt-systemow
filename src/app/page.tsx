@@ -2,52 +2,46 @@ import './globals.css';
 
 const projects = [
   {
-    icon: '📐',
     title: 'PrzedmiarAI',
     desc: 'AI automatycznie mierzy powierzchnie z rysunków PDF. Oszczędza 80% czasu kosztorysantów.',
     tag: 'Budowlanka',
-    color: 'rgba(139, 92, 246, 0.15)',
-    url: 'https://przedmiarai.vercel.app'
+    url: 'https://przedmiarai.vercel.app',
+    screenshot: 'https://api.microlink.io/?url=https://przedmiarai.vercel.app&screenshot=true&meta=false&embed=screenshot.url'
   },
   {
-    icon: '🏠',
     title: 'Agentivo',
     desc: 'AI dla pośredników nieruchomości. Follow-upy, skaner ofert, trener negocjacji.',
     tag: 'Nieruchomości',
-    color: 'rgba(59, 130, 246, 0.15)',
-    url: 'https://agentivo.pl'
+    url: 'https://agentivo.pl',
+    screenshot: 'https://api.microlink.io/?url=https://agentivo.pl&screenshot=true&meta=false&embed=screenshot.url'
   },
   {
-    icon: '💰',
     title: 'WycenaAI',
     desc: 'Wycena roboty budowlanej w 30 sekund. Aktualne stawki rynkowe.',
     tag: 'Budowlanka',
-    color: 'rgba(34, 197, 94, 0.15)',
-    url: 'https://wycena-ai.vercel.app'
+    url: 'https://wycena-ai.vercel.app',
+    screenshot: 'https://api.microlink.io/?url=https://wycena-ai.vercel.app&screenshot=true&meta=false&embed=screenshot.url'
   },
   {
-    icon: '🛋️',
     title: 'WnętrzeAI',
     desc: 'AI Virtual Staging. Puste mieszkanie urządzone w 30 sekund.',
     tag: 'Nieruchomości',
-    color: 'rgba(236, 72, 153, 0.15)',
-    url: 'https://wnetrzeai.pl'
+    url: 'https://wnetrzeai.pl',
+    screenshot: 'https://api.microlink.io/?url=https://wnetrzeai.pl&screenshot=true&meta=false&embed=screenshot.url'
   },
   {
-    icon: '♿',
     title: 'AccessiBot',
     desc: 'Skaner dostępności WCAG. Wykryj problemy zanim wykryje je kontrola.',
     tag: 'SaaS',
-    color: 'rgba(6, 182, 212, 0.15)',
-    url: 'https://accessibot.pl'
+    url: 'https://accessibot.pl',
+    screenshot: 'https://api.microlink.io/?url=https://accessibot.pl&screenshot=true&meta=false&embed=screenshot.url'
   },
   {
-    icon: '🏗️',
     title: 'GTF Panel',
     desc: 'System zarządzania dla firmy budowlanej. Oferty, klienci, kalendarz.',
     tag: 'Wewnętrzne',
-    color: 'rgba(249, 115, 22, 0.15)',
-    url: 'https://panel.grunttofundament.pl'
+    url: 'https://panel.grunttofundament.pl',
+    screenshot: 'https://api.microlink.io/?url=https://panel.grunttofundament.pl&screenshot=true&meta=false&embed=screenshot.url'
   },
 ];
 
@@ -100,12 +94,18 @@ export default function Home() {
           <div className="projects-grid">
             {projects.map((project, i) => (
               <a key={i} href={project.url} target="_blank" rel="noopener noreferrer" className="project-card">
-                <div className="project-icon" style={{ background: project.color }}>
-                  {project.icon}
+                <div className="project-screenshot">
+                  <img 
+                    src={project.screenshot} 
+                    alt={`${project.title} screenshot`}
+                    loading="lazy"
+                  />
                 </div>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-desc">{project.desc}</p>
-                <span className="project-tag">{project.tag}</span>
+                <div className="project-info">
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-desc">{project.desc}</p>
+                  <span className="project-tag">{project.tag}</span>
+                </div>
               </a>
             ))}
           </div>
