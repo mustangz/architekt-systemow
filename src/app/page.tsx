@@ -43,6 +43,13 @@ const projects = [
     url: 'https://panel.grunttofundament.pl',
     screenshot: 'https://api.microlink.io/?url=https://panel.grunttofundament.pl&screenshot=true&meta=false&embed=screenshot.url'
   },
+  {
+    title: 'Grunt to Fundament',
+    desc: 'Strona firmowa dla wykonawcy płyt fundamentowych. Lead generation, portfolio realizacji.',
+    tag: 'Budowlanka',
+    url: 'https://grunttofundament.pl',
+    screenshot: 'https://api.microlink.io/?url=https://grunttofundament.pl&screenshot=true&meta=false&embed=screenshot.url'
+  },
 ];
 
 export default function Home() {
