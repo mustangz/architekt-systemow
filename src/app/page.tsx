@@ -6,7 +6,7 @@ const projects = [
     desc: 'AI automatycznie mierzy powierzchnie z rysunków PDF. Oszczędza 80% czasu kosztorysantów.',
     tag: 'Budowlanka',
     url: 'https://przedmiarai.vercel.app',
-    screenshot: 'https://api.microlink.io/?url=https://przedmiarai.vercel.app&screenshot=true&meta=false&embed=screenshot.url'
+    screenshot: 'https://api.microlink.io/?url=https://przedmiarai.vercel.app&screenshot=true&meta=false&embed=screenshot.url&force=true&t=20260206'
   },
   {
     title: 'Agentivo',
